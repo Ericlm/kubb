@@ -2,7 +2,7 @@
 import client from 'axios'
 import type { RequestConfig, ResponseErrorConfig } from 'axios'
 
-export function getFindPetsByTagsUrl() {
+function getFindPetsByTagsUrl() {
   return `/pet/findByTags` as const
 }
 

@@ -16,6 +16,7 @@ export const clientGenerator = createReactGenerator<PluginClient>({
         options: { output },
       },
     } = useApp<PluginClient>()
+
     const oas = useOas()
     const { getSchemas, getName, getFile } = useOperationManager()
 
@@ -73,6 +74,7 @@ export const clientGenerator = createReactGenerator<PluginClient>({
           paramsCasing={options.paramsCasing}
           paramsType={options.paramsType}
           typeSchemas={type.schemas}
+          isExportable={options.exportUrl ?? false}
           operation={operation}
         />
 

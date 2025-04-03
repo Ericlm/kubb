@@ -107,6 +107,11 @@ type ResolvedOptions = {
   pathParamsType: NonNullable<Options['pathParamsType']>
   paramsType: NonNullable<Options['paramsType']>
   paramsCasing: Options['paramsCasing']
+  /**
+   * Does the url need to be exported.
+   * @default false
+   */
+  exportUrl?: boolean
 }
 
 export type PluginClient = PluginFactoryOptions<'plugin-client', Options, ResolvedOptions, never, ResolvePathOptions>
